@@ -7,7 +7,7 @@ import com.orhanobut.logger.Logger;
 /**
  * 作者： JoinYon on 2018/6/26.
  * 邮箱：2816886869@qq.com
- *
+ * <p>
  * 对Logger进行封装
  */
 
@@ -63,6 +63,10 @@ public class AppLog {
         if (BuildConfig.DEBUG) {
             Logger.e(msg);
         }
+    }
+
+    public static void e(Throwable e) {
+        Logger.e(e, "");
     }
 
 }
